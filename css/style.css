@@ -1,0 +1,290 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:220px;
+height:100vh;
+background:#2c3e50;
+color:white;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar button{
+background:#e74c3c;
+border:none;
+padding:10px;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* ============================= */
+/* MAIN */
+/* ============================= */
+
+.main{
+margin-left:220px;
+padding:30px;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.btn-dark{
+background:#34495e;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.card-container{
+display:flex;
+gap:20px;
+margin-bottom:30px;
+}
+
+.card{
+flex:1;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:16px;
+}
+
+.card p{
+font-size:24px;
+font-weight:bold;
+color:#27ae60;
+}
+
+/* ============================= */
+/* FORM */
+/* ============================= */
+
+.form-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+margin-bottom:30px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.form-box input{
+padding:10px;
+border:1px solid #ddd;
+border-radius:5px;
+flex:1;
+}
+
+.btn-primary{
+background:#27ae60;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn-dark{
+background:#34495e;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* ============================= */
+/* LISTA */
+/* ============================= */
+
+.lista{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+margin-bottom:30px;
+}
+
+.lista input{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+padding:10px;
+border-bottom:1px solid #eee;
+}
+
+.item-info strong{
+display:block;
+}
+
+.data-registro{
+font-size:12px;
+color:#888;
+}
+
+/* ============================= */
+/* GRÁFICOS */
+/* ============================= */
+
+.graficos{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+canvas{
+margin-top:20px;
+}
+
+/* ============================= */
+/* TOAST */
+/* ============================= */
+
+.toast{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#27ae60;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+display:none;
+}
+
+/* =========================
+   LOGIN PROFISSIONAL
+========================= */
+
+.login-body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 40px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #10b981;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #059669;
+}
+
+.erro {
+  margin-top: 10px;
+  color: #ef4444;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

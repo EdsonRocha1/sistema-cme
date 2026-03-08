@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CME System</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>CME System</h2>
+  <button onclick="logout()">Sair</button>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="main">
+
+  <div class="header">
+    <h1>Dashboard de Registros</h1>
+    <button onclick="toggleDarkMode()" class="btn-dark">🌙</button>
+  </div>
+
+  <!-- CARDS -->
+  <div class="card-container">
+    <div class="card">
+      <h3>Total de Registros</h3>
+      <p id="contadorCard">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Último Registro</h3>
+      <p id="ultimoRegistro">--</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-box">
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="descricao" placeholder="Descrição">
+
+    <button id="btnSalvar" onclick="criarRegistro()" class="btn-primary">
+      Salvar
+    </button>
+
+    <button id="btnCancelar" onclick="limparFormulario()" style="display:none;">
+      Cancelar
+    </button>
+
+    <button onclick="exportarPDF()" class="btn-dark">
+      Exportar PDF
+    </button>
+  </div>
+
+  <div class="filtros">
+
+  <input type="date" id="filtroData">
+
+  <input type="text" id="filtroNome" placeholder="Filtrar por nome">
+
+  <input type="text" id="filtroDescricao" placeholder="Filtrar por descrição">
+
+  <button onclick="limparFiltros()" class="btn-dark">
+    Limpar Filtros
+  </button>
+
+</div>
+
+  <!-- LISTA -->
+  <div class="lista">
+    <input type="text" id="busca" placeholder="🔎 Buscar registro...">
+    <div id="lista"></div>
+  </div>
+
+  <!-- GRÁFICOS -->
+  <div class="graficos">
+    <canvas id="graficoRegistros" height="100"></canvas>
+    <canvas id="graficoPizza" height="100"></canvas>
+    <canvas id="graficoData" height="100"></canvas>
+  </div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
