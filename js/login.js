@@ -2,7 +2,7 @@ function fazerLogin() {
   const usuario = document.getElementById("usuario").value;
   const senha = document.getElementById("senha").value;
 
-  fetch("http://localhost:3000/login", {
+  fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -13,7 +13,6 @@ function fazerLogin() {
   .then(data => {
     if (data.sucesso) {
 
-      // 🔐 SALVA SESSÃO
       localStorage.setItem("logado", "true");
 
       window.location.href = "index.html";

@@ -13,7 +13,7 @@ function logout() {
 // =============================
 // 🔹 CONFIGURAÇÕES
 // =============================
-const API_URL = "http://localhost:3000/registros";
+const API_URL = "/registros";
 
 let todosRegistros = [];
 let idEmEdicao = null;
