@@ -13,7 +13,7 @@ function fazerLogin() {
   .then(data => {
     if (data.sucesso) {
       localStorage.setItem("logado", "true");
-      window.location.href = "index.html";
+      window.location.href = "/";
     } else {
       document.getElementById("erro").innerText = "Usuário ou senha inválidos";
     }
