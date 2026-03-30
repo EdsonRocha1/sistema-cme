@@ -10,18 +10,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 // API
 app.use("/registros", registroRoutes);
 
-
-// SERVIR FRONTEND
+// FRONTEND
 app.use(express.static(path.join(__dirname, "..")));
 
+// ROTA PRINCIPAL
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "login.html"));
+});
 
 // LOGIN
 app.post("/login", (req, res) => {
-
   const { usuario, senha } = req.body;
 
   const usuarioFixo = "admin";
@@ -35,7 +36,6 @@ app.post("/login", (req, res) => {
     sucesso: false,
     mensagem: "Credenciais inválidas"
   });
-
 });
 
 app.listen(PORT, () => {
